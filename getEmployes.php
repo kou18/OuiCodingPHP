@@ -6,7 +6,6 @@ $sql= "SELECT a.`id`, a.`nom`, a.`prenom`, a.`email`, b.`type`, b.`debut`, b.`fi
 $result=mysqli_query($con,$sql);
 
 $json_array=array();
-$row=mysqli_fetch_assoc($result);
 while($row=mysqli_fetch_assoc($result)){
 	$json_array[]=$row;
 }
