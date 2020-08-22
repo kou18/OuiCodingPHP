@@ -19,7 +19,7 @@ if(mysqli_num_rows($result)>0)
 }
 else
 {
-	$sql= " INSERT INTO `users` (`id`, `nom`, `prenom`, `entreprise`, `role`, `email`, `mdp`, `joursConge`, `verifConge`, `path`) VALUES ('$id', '$nom', '$prenom', '$entreprise', 'RH', '$email', '$mdp', '0', '', ''); ";
+	$sql= " INSERT INTO `users` (`id`, `nom`, `prenom`, `entreprise`, `role`, `email`, `mdp`, `joursConge`, `path`) VALUES ('$id', '$nom', '$prenom', '$entreprise', 'RH', '$email', '$mdp', '0', ''); ";
 	if(mysqli_query($con,$sql))
 	{
 		$status="User successfully Registered";
