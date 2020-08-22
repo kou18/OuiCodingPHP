@@ -2,7 +2,7 @@
 require "init.php";
 
 $id=$_GET['id'];
-$sql= "SELECT a.*, b.joursConge  FROM `contrat` a, `users` b WHERE iduser=$id";
+$sql= "SELECT a.*, b.joursConge  FROM `contrat` a, `users` b WHERE a.iduser=$id AND b.id=$id"  ;
 $result=mysqli_query($con,$sql);
 
 $json_array=array();
